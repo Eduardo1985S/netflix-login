@@ -243,3 +243,53 @@ form .form-help :where(label, a) {
     font-family: "Rubik", sans-serif;
     transition: color 600ms;
 }
+
+/* Estilos do Pop-up LGPD */
+.popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.603); /* Fundo escuro com opacidade */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Inicialmente escondido */
+}
+
+.popup-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.popup-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.popup-content a {
+    color: #ffbd87;
+    text-decoration: underline;
+}
+
+#accept-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#accept-btn:hover {
+    background-color: #f40612;
+}

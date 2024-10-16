@@ -75,5 +75,34 @@
         <a href="#">Learn more.</a>
       </small>
     </div>
+    <div id="lgpd-popup" class="popup">
+      <div class="popup-content">
+          <h2>Privacy Policy</h2>
+          <p>
+              We use cookies and other technologies to enhance your experience on our site. By continuing, you accept our 
+              <a href="#">privacy policy</a> and the use of cookies.
+          </p>
+          <button id="accept-btn">Accept</button>
+      </div>
+  </div>
+  <script>
+    // Seleciona o botão de aceitar e o pop-up
+    const acceptBtn = document.getElementById('accept-btn');
+    const lgpdPopup = document.getElementById('lgpd-popup');
+
+    // Exibe o pop-up quando a página é carregada
+    window.onload = function() {
+        if (!localStorage.getItem('lgpdAccepted')) {
+            lgpdPopup.style.display = 'flex';
+        }
+    }
+
+    // Quando o botão de aceitar é clicado, escondemos o pop-up e salvamos a aceitação no localStorage
+    acceptBtn.onclick = function() {
+        lgpdPopup.style.display = 'none';
+        localStorage.setItem('lgpdAccepted', 'true');
+    }
+</script>
+
   </body>
 </html>
